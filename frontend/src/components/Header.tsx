@@ -1,7 +1,9 @@
+
 import TodoLogo from "../assets/icons/Todo-logo.webp";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <header className="flex justify-between items-center mt-10 shadow-2xl p-3 rounded-3xl">
+    <header className=" header-container flex justify-between items-center mt-10 shadow-2xl p-3 rounded-3xl">
       <div className="w-[5%] ">
         <a href="">
           <img src={TodoLogo} alt="" className="w-full rounded-xl" />
@@ -16,7 +18,7 @@ const Header = () => {
             <a href="#">Login</a>
           </li>
           <li>
-            <a href="#">SignUp</a>
+            <Link to="/to-do-app">Get Started</Link>
           </li>
         </ul>
       </nav>

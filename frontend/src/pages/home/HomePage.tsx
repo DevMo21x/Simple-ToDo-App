@@ -1,10 +1,10 @@
 import Header from "../../components/Header";
-import TasksLayoutGrid from "./TasksLayoutGrid";
+import HomeLayoutGrid from "./HomeLayoutGrid";
 const HomePage = () => {
   return (
     <>
       <Header />
-      <TasksLayoutGrid />
+      <HomeLayoutGrid />
     </>
   );
 };
