@@ -1,12 +1,8 @@
 @import "tailwindcss";
 
-
+html {
+  font-family: Poppins;
+}
 body {
   @apply max-w-7xl mx-auto;
 }
-
-
-
-
-
-
