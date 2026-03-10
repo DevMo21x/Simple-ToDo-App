@@ -4,13 +4,15 @@ import type { FC } from "react";
 interface FilterBoxProps {
   Icon: FC<React.SVGProps<SVGSVGElement>>;
   text: string;
-  isSelected: boolean; //
+  numberOfTasks: number;
+  isSelected: boolean;
   onClick: () => void;
 }
 
 const FilterBox: React.FC<FilterBoxProps> = ({
   Icon,
   text,
+  numberOfTasks,
   isSelected,
   onClick,
 }) => {
@@ -21,7 +23,7 @@ const FilterBox: React.FC<FilterBoxProps> = ({
 
   return (
     <div
-      className="max-w-87.5 p-1.5 hover:bg-gray-100 rounded-md"
+      className="max-w-87.5 p-1.5 hover:bg-gray-100 rounded-sm"
       style={boxStyle}
       onClick={onClick}
     >
@@ -31,7 +33,11 @@ const FilterBox: React.FC<FilterBoxProps> = ({
             <Icon />
             <p>{text}</p>
           </div>
-          <p>number</p>
+          <p
+            className={`mr-3 ${isSelected && " bg-black  px-2  text-white rounded-2xl"}`}
+          >
+            {numberOfTasks}
+          </p>
         </div>
       </Link>
     </div>
