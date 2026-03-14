@@ -2,9 +2,10 @@ import { EllipsisVertical, Calendar } from "lucide-react";
 // import { Link } from "react-router-dom";
 const TaskContainer = () => {
   return (
-    <div className="task-container border flex w-3xl h-20 justify-between items-center p-5 rounded-2xl">
+    <div className="task-container border flex w-3xl h-20 justify-between items-center p-5 rounded-2xl hover:shadow-sm"
+    style={{borderColor: '#CCD7E4'}}>
       <div className="flex gap-5 ">
-        <div className="radio-btn-container border w-6 rounded-4xl h-6"></div>
+        <div className="radio-btn-container border w-6 rounded-4xl h-6 cursor-pointer"></div>
 
         {/* Container for Task content */}
         <div className="task-content-container">
