@@ -13,8 +13,9 @@ const TaskContainer = () => {
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!event.target.closest(".dropdown-container")) {
+    const handleClickOutside = (event: Event) => {
+      const target = event.target as HTMLElement | null;
+      if (target && !target.closest(".dropdown-container")) {
         closeDropdown();
       }
     };
