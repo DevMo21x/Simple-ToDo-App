@@ -35,7 +35,7 @@ const CreateNewTask = () => {
             <input
               className="w-100 outline-none"
               type="text"
-              placeholder="What need to be done?"
+              placeholder="Click here to start typing"
             />
           )}
         </div>
