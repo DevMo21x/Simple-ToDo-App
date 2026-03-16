@@ -31,3 +31,4 @@ coverage/
 
 # Debugging files
 *.log
+backend/ApiTesting.http
