@@ -1,4 +1,4 @@
-import { Inbox, Calendar, Star, Archive } from "lucide-react";
+import { Inbox, Calendar, Star, CircleCheckBig } from "lucide-react";
 import FilterBox from "./FilterBox";
 import { useState } from "react";
 import TagFiler from "./TagFilter";
@@ -39,7 +39,7 @@ const MenuFilterBoxes = () => {
             onClick={() => handleFilterClick("Important")}
           />
           <FilterBox
-            Icon={Archive}
+            Icon={CircleCheckBig}
             text="Completed"
             numberOfTasks={13}
             isSelected={selectedFilter === "Completed"}
