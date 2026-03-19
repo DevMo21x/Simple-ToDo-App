@@ -32,3 +32,4 @@ coverage/
 # Debugging files
 *.log
 backend/ApiTesting.http
+backend/tests/testDbConnection.ts

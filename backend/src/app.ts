@@ -1,7 +1,7 @@
 import express, { Application } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import todoRoutes from "./api/routes/todoRoutes";
+import tasksRoutes from "./api/routes/tasksRoutes";
 import { errorHandler, notFound } from "./middleware/errorMiddleware";
 
 dotenv.config();
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use("/api/todos", todoRoutes);
+app.use("/api/tasks", tasksRoutes);
 
 // Error Handling
 app.use(notFound);

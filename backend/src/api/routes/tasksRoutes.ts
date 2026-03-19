@@ -1,15 +1,15 @@
 import { Router } from "express";
 import {
-  getTodos,
+  getTasks,
   getTodoById,
   createTodo,
   updateTodo,
   deleteTodo,
-} from "../controllers/todoController";
+} from "../controllers/taskController";
 
 const router = Router();
 
-router.get("/", getTodos);
+router.get("/", getTasks);
 router.get("/:id", getTodoById);
 router.post("/", createTodo);
 router.put("/:id", updateTodo);

@@ -1,7 +1,14 @@
-import { Request, Response } from "express";
+import { Request, Response, NextFunction } from "express";
+import * as TaskModel from "../../models/taskModel";
 
-export const getTodos = (req: Request, res: Response): void => {
-  res.json({ message: "Get all todos" });
+export const getTasks = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    const tasks = await TaskModel.getAllTasks();
+    res.status(200).json(tasks);
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
 };
 
 export const getTodoById = (req: Request, res: Response): void => {
