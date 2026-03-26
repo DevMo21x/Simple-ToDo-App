@@ -6,22 +6,6 @@ import axios from "axios";
 import type { Task } from "../../types/task";
 import type { GetTasksResponse } from "../../types/api/taskResponses";
 const ToDoApp = () => {
-  // type Task = {
-  //   id: number;
-  //   title: string;
-  //   due_date: string | null;
-  //   is_completed: boolean;
-  //   is_important: boolean;
-  //   tag_id?: number;
-  //   user_id: number;
-  //   created_at: string;
-  //   updated_at: string;
-  // };
-
-  // type GetTasksResponse = {
-  //   tasks: Task[];
-  // };
-
   const {
     data: tasks,
     isPending,
