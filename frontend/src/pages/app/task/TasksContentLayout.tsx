@@ -1,7 +1,10 @@
 import TasksHeading from "./TasksHeading";
 import TaskContainer from "./TaskContainer";
 import CreateNewTask from "./CreateNewTask";
-const TasksMainLayout = () => {
+import type { ChildComponentsProps } from "../../../types/task";
+
+
+const TasksMainLayout = ({tasks}: ChildComponentsProps) => {
   return (
     <>
       <TasksHeading />
@@ -9,7 +12,7 @@ const TasksMainLayout = () => {
       <CreateNewTask />
       </div>
       <div className="mt-5">
-        <TaskContainer />
+        <TaskContainer tasks={tasks}/>
       </div>
     </>
   );
